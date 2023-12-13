@@ -1,18 +1,29 @@
+body {
+	background-color: #eceedb;
+}
 h1{
-	
+	font-family: 'PT Serif Bold';
+	font-size: 30px;
+	color: #DE8F09;
+	margin: auto;
 }
 h2{
-	
+	font-family: 'Roboto Medium Italic';
+	font-size: 20px;
+	color: #E7B156; 
+	margin: auto;
 }
-	p{
-		
-	}
+p{
+	font-family: 'Roboto Regular';
+	font-size: 16px;
+	margin: auto;
+}
 
 .container{
 	height: auto;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 50px auto 50px;
+	grid-template-rows: 100px auto 50px;
 	grid-gap: 3px;
 	grid-template-areas: 
 	"h h h h h h h h h h h h"
@@ -21,19 +32,35 @@ h2{
 	
 	.header{
 		grid-area: h;
+		background-color: #dad4b5;
+			.navbar{
+				display: flex;
+				.navitem{
+					margin: 8px;
+					margin-top: 14px;
+
+					a{
+						display: inline-block;
+						text-decoration: none;
+						padding: 24px 10px;
+						border-radius: 5px;
+						background-color: #8a9ebe;
+					}
+					a:hover {
+						background: radial-gradient(#8a9ebe, #5271a4a2);
+					}
+				}
+			}
 	}
 	.content{
 		grid-area: c;
 	}
 	.footer{
 		grid-area: f;
+		background-color: #dad4b5;
 	}
 
-
-
-
-
-	.autofit{
+	.autofit{ /*good for pictures in a grid with different sizes*/
 		display: grid;
 		grid-gap: 5px;
 		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));

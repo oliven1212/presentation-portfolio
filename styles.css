@@ -11,7 +11,13 @@ h2{
 	font-family: 'Roboto', sans-serif;
 	font-size: 30px;
 	color: #E7B156; 
-	margin: auto;
+	margin: auto 0px;
+}
+h3{
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	color: #E7B156; 
+	margin: auto 0px;
 }
 p, pre{
 	font-family: 'Roboto', sans-serif;
@@ -21,13 +27,13 @@ p, pre{
 .container{
 	height: auto;
 	display: grid;
-	grid-template-columns: repeat(12, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: 100px auto 50px;
 	grid-gap: 3px;
 	grid-template-areas: 
-	"h h h h h h h h h h h h"
-	"c c c c c c c c c c c c"
-	"f f f f f f f f f f f f";
+	"h h h h"
+	"c c c c"
+	"f f f f";
 	
 	.header{
 		grid-area: h;
@@ -112,7 +118,8 @@ p, pre{
 				background-color: #00004712;
 				border: #000047;
 				border-style: solid;
-				
+				border-radius: 10px;
+
 				img{
 					display: block;
 					margin: 5px auto;
@@ -131,5 +138,42 @@ p, pre{
 			}
 		}
 
+	}
+
+	.contentkontakt{
+		grid-area: c;
+		display: grid;
+		grid-template-columns: 2fr 4fr 1fr;
+		grid-template-rows:  repeat(3, auto);
+		grid-gap: 3px;
+		
+		grid-template-areas: 
+		". h1 ."
+		". h2 ."
+		". box .";
+
+		.kontaktbox{
+			grid-area: box;
+			background-color: #00004712;
+			border: #000047;
+			border-style: solid;
+			border-radius: 10px;
+			margin: 35px 0px;
+			width: 75%;
+			display: grid;
+			grid-template-columns: 100px 1fr 4fr;
+			grid-template-rows:  repeat(1, auto);
+			grid-gap: 3px;
+			grid-template-areas: 
+			"pre1 pre2 img";
+
+				img{
+					display: block;
+					margin: 5px auto;
+					width: 85%;
+					max-height: 500px;
+					max-width: 400px;
+				}
+		}
 	}
 }

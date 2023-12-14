@@ -1,22 +1,21 @@
 body {
-	background-color: #eceedb;
+	background-color: #ffffff;
+	margin: 0px;
 }
 h1{
-	font-family: 'PT Serif Bold';
-	font-size: 30px;
+    font-family: 'PT Serif', serif;
+	font-size: 40px;
 	color: #DE8F09;
-	margin: auto;
 }
 h2{
-	font-family: 'Roboto Medium Italic';
-	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
 	color: #E7B156; 
 	margin: auto;
 }
-p{
-	font-family: 'Roboto Regular';
-	font-size: 16px;
-	margin: auto;
+p, pre{
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
 }
 
 .container{
@@ -32,7 +31,7 @@ p{
 	
 	.header{
 		grid-area: h;
-		background-color: #dad4b5;
+		background-color: #000047;
 			.navbar{
 				display: flex;
 				.navitem{
@@ -42,29 +41,95 @@ p{
 					a{
 						display: inline-block;
 						text-decoration: none;
-						padding: 24px 10px;
+						padding: 19px 10px;
 						border-radius: 5px;
-						background-color: #8a9ebe;
 					}
-					a:hover {
-						background: radial-gradient(#8a9ebe, #5271a4a2);
+					a:hover{
+						background: #5271a4a2;
 					}
 				}
 			}
 	}
 	.content{
 		grid-area: c;
-	}
-	.footer{
-		grid-area: f;
-		background-color: #dad4b5;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows:  repeat(3, auto);
+		grid-gap: 3px;
+		
+		grid-template-areas: 
+		"p t"
+		"p t2"
+		"p .";
 	}
 
-	.autofit{ /*good for pictures in a grid with different sizes*/
+	.footer{
+		grid-area: f;
+		background-color: #000047;
+		display: flex;
+		justify-content: space-evenly;
+			.item{
+				margin: 4px 8px;
+
+
+				a{
+					display: inline-block;
+					text-decoration: none;
+					padding: 3px;
+					border-radius: 5px;
+
+				}
+				a:hover{
+					background: #5271a4a2;
+				}
+			}
+	}
+
+	.contentommig{
+		grid-area: c;
 		display: grid;
-		grid-gap: 5px;
-		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-		grid-auto-rows: 75px;
-		grid-auto-flow: dense;
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows:  repeat(4, auto);
+		grid-gap: 10px;
+		margin: 0px 50px;
+		grid-template-areas: 
+		". . h11 h11 h11 . ."
+		". . pre pre pre . ."
+		". . h12 h12 h12 . ."
+		". k k k k k .";
+		.gridkompetance{
+			grid-area: k;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows:  repeat(4, auto);
+			grid-gap: 10px;
+			margin: 0px 50px;
+			grid-template-areas: 
+			"k1 k2"
+			"k3 k4";
+
+			.kompetancebox{
+				background-color: #00004712;
+				border: #000047;
+				border-style: solid;
+				
+				img{
+					display: block;
+					margin: 5px auto;
+					width: 85%;
+					max-height: 350px;
+				}
+				p{
+					display: block;
+					margin: 20px auto;
+					width: 85%;
+				}
+				h2{
+					text-align: center;
+					margin: 5px;
+				}
+			}
+		}
+
 	}
 }

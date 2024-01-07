@@ -22,6 +22,7 @@ h3{
 p, pre{
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
+	line-height: 150%;
 }
 
 
@@ -100,8 +101,8 @@ p, pre{
 	margin: 0px 50px;
 	grid-template-areas: 
 	". . h11 h11 h11 . ."
-	". . pre pre pre . ."
-	". . h12 h12 h12 . ."
+	". p p p p p ."
+	". h12 h12 h12 h12 h12 ."
 	". k k k k k .";
 }
 .contentommig .gridkompetance{
@@ -121,6 +122,7 @@ p, pre{
 	border: #000047;
 	border-style: solid;
 	border-radius: 10px;
+	margin: 0px auto;
 }
 .kompetancebox img{
 	display: block;
@@ -142,8 +144,15 @@ p, pre{
     height: 500px;
 	margin: auto;
     background:url('pictures/Bouncy.png') 0 0 no-repeat;
+	background-color: gray;
+	color: black;
+	text-align: center;
+	
 }
+
 .bouncy:hover{
+	background-color: transparent;
+	color: transparent;
 	animation: bounce 0.85s steps(14) infinite;
 }
 @keyframes bounce {
@@ -170,7 +179,7 @@ p, pre{
 	border-style: solid;
 	border-radius: 10px;
 	margin: 35px 0px;
-	width: 75%;
+	width: auto;
 	display: grid;
 	grid-template-columns: 100px 1fr 4fr;
 	grid-template-rows:  repeat(1, auto);
@@ -182,8 +191,10 @@ p, pre{
 }
 .kontaktbox img{
 	display: block;
-	margin: 5px auto;
+	margin: auto auto;
 	width: 85%;
 	max-height: 500px;
 	max-width: 400px;
+	min-width: 100px;
+	
 }
